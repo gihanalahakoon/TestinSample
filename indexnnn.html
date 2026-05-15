@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Images</title>
+  <style>
+    h1 {
+      font-size: 4vw;
+    } 
+    .left {
+      background-color: aqua;
+      float: left;
+      padding: 20px;
+      width: 20%;
+    }
+    .center {
+      background-color: blue;
+      float: left;
+      width: 50%;
+      padding: 20px;
+      color: white;
+    }
+    .right {
+      background-color: lightgreen;
+      float: left;
+      width: 20%;
+      padding: 20px;
+    }
+    @media screen and (max-width:800px){
+      .left, .center, .right{
+        width:100%;
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <h1>Responsive Image</h1>
+  <picture>
+    <source srcset="./image-small.jpg" media="(max-width: 500px)">
+    <source srcset="./image-large.jpg" media="(max-width: 1500px)">
+    <img src="./image-large.jpg" alt="Children together" style="width: 100%;">
+  </picture>
+
+  <section>
+    <div class="left">
+      <p>Left</p>
+    </div>
+    <div class="center">
+      <p>Center</p>
+    </div>
+    <div class="right">
+      <p>Right</p>
+    </div>
+  </section>
+</body>
+</html>
